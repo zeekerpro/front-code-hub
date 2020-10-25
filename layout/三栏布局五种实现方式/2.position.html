@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>使用绝对定位实现经典三栏布局</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.layout article > div{
+			min-height: 300px;	
+		}
+
+		.layout.absolute .left-center-right > div {
+			position: absolute;
+		}
+
+		.layout.absolute .left {
+			left: 0;
+			width: 300px;
+			background: gray;
+		}
+
+		.layout.absolute .center {
+			left: 300px;
+			right: 300px;
+			background: pink;
+		}
+
+		.layout.absolute .right {
+			right: 0;
+			width: 300px;
+			background: green;
+		}
+	</style>
+</head>
+
+<body>
+	<section class="layout absolute">
+		<article class="left-center-right">
+			<div class="left">left</div>
+			<div class="center">center</div>
+			<div class="right">right</div>
+		</article>
+	</section>
+</body>
+</html>

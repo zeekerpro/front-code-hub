@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>使用网格布局实现三栏布局</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.layout.grid .left-center-right {
+			width: 100%;
+			display: grid;
+			grid-template-rows: 300px;
+			grid-template-columns: 300px auto 300px;
+		}
+
+		.layout.grid .left {
+			background: gray;
+		}
+
+		.layout.grid .center {
+			background: pink;
+		}
+
+		.layout.grid .right {
+			background: green;
+		}
+
+
+	</style>
+</head>
+
+<body>
+	<section class="layout grid">
+		<article class="left-center-right">
+			<div class="left">left</div>
+			<div class="center">center</div>
+			<div class="right">right</div>
+		</article>
+	</section>
+</body>
+
+</html>

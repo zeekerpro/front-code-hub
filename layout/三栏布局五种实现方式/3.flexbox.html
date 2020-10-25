@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>使用flexbox实现经典三栏布局</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.layout.flexbox .left-center-right {
+			display: flex;
+		}
+
+		.layout.flexbox .left-center-right > div {
+			min-height: 300px;
+		}
+
+		.layout.flexbox .left {
+			width: 300px;
+			background: gray;
+		}
+
+		.layout.flexbox .right {
+			width: 300px;
+			background: green;
+		}
+
+		.layout.flexbox .center {
+			flex: 1;
+			background: pink;
+		}
+
+	</style>
+</head>
+
+<body>
+	<section class="layout flexbox">
+		<article class="left-center-right">
+			<div class="left">left</div>
+			<div class="center">center</div>
+			<div class="right">right</div>
+		</article>
+	</section>
+</body>
+
+</html>

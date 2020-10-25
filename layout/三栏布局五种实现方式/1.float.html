@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>使用float实现经典三栏布局</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.layout article div {
+			min-height: 300px;
+		}
+
+		.layout .left {
+			float: left;
+			width: 300px;
+			background: gray;
+		}
+
+		.layout .right {
+			float: right;
+			width: 300px;
+			background: green;
+		}
+
+		.layout .center {
+			background: pink;
+		}
+	</style>
+</head>
+
+<body>
+	<section class="layout float">
+		<article class="left-right-center">
+			<div class="left"> left </div> 
+			<div class="right"> right </div> 
+			<div class="center"> center </div>
+		</article>
+	</section>
+</body>
+</html>
