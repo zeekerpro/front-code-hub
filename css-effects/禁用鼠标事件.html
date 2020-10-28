@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> 按钮透明度为0时设置禁用鼠标事件 </title>
+	<style>
+		
+		.container button {
+			animation: fade 3s forwards;
+		}
+
+		/* 给button设置了颜色渐变，3s后button不可见了，但是依然可以触发hover，click等鼠标事件 
+			 当设置pointer-event: none; 时则元素不会响应鼠标的任何事件
+		 */
+		@keyframes fade {
+			from {
+				opacity: 1;
+				pointer-event: all;
+			}
+			to {
+				opacity: 0;
+				pointer-event: none;
+			}
+		}
+
+	</style>
+</head>
+<body>	
+	<div class="container">
+		<button>button</button>
+	</div>
+</body>
+</html>

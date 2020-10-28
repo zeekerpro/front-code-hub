@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>检测系统主题修改背景色和文字颜色</title>
+	<style>
+	/* 通过媒体查询系统颜色模式为dark，对应设置css */
+	@media(perfers-color-scheme: dark){
+		.container {
+			background-color: #fff;
+		}
+
+		.container .content {
+			color: #000;
+		}
+	}
+
+	/* 通过媒体查询系统颜色模式为dark，对应设置css */
+	@media(perfers-color-scheme: light){
+		.container {
+			background-color: #000;
+		}
+		.container .content {
+			color: #fff;
+		}
+	}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="content">
+			文本
+		</div>
+	</div>
+</body>
+</html>

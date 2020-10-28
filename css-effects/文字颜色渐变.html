@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> 文字颜色渐变效果 </title>
+	<style>
+	.container{
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.container .content {
+		font-size: 60px;
+		/* 1. 给文字容器添加渐变背景色 */
+		background: linear-gradient(90deg, #ff8a00, #e52e71);
+		/* 2. 对背景进行文字裁剪，此时因为文字本身有颜色，覆盖了文字后面的背景,所以和刚开始效果相同*/
+		-webkit-background-clip: text;
+		/* 3. 将文字本身的颜色改为透明色*/
+		-webkit-text-fill-color: transparent;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="content">
+			颜色渐变的文字
+		</div>
+	</div>
+</body>
+</html>

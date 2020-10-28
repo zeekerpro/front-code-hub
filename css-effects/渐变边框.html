@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>渐变边框</title>
+	<style>
+		/*
+			 渐变边框采用一种取巧的办法：覆盖一个渐变背景图的中心区域
+		 */
+
+		.box {
+			width: 200px;
+			height: 200px;
+			position: relative;
+			background: #9cdafc;
+		}
+
+		.box:before {
+			content: "";
+			z-index: -1;
+			position: absolute;
+			width: 220px;
+			height: 220px;
+			top: -10px;
+			left: -10px;
+			background-image: linear-gradient(0deg, orange, red);
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>
